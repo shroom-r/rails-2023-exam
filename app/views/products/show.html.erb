@@ -1,0 +1,15 @@
+<% if @product.archived? %>
+  <h3>ARCHIVED</h3>
+<% end %>
+
+<%= render @product %>
+
+<br/>
+<nav>
+  <%= link_to "Edit this product", edit_product_path(@product) %> |
+  <%= link_to "Back to products", products_path %>
+</nav>
+
+<br/>
+<%= button_to "Archive", [:archive, @product] %>
+<%= button_to "Destroy", @product, method: :delete %>

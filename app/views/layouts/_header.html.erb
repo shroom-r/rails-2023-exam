@@ -1,0 +1,10 @@
+<header>
+  <h1>New Year's Shop</h1>
+  <nav>
+    <%= link_to 'All', products_path %>
+    <%= link_to 'Discounts 💥', "/discounts" %>
+    <% Product.categories.keys.each do |category| %>
+      <%= link_to t("product.category.#{category}"), products_by_category_path(category: category) %>
+    <% end %>
+  </nav>
+</header>

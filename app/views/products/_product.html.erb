@@ -1,0 +1,16 @@
+<div id="<%= dom_id product %>" class='product'>
+  <%= link_to product, class: 'title' do %>
+    <strong><%= product.title %></strong>
+  <% end %>
+
+  <p><%=h product.description %></p>
+
+  <ul>
+    <li class='category'>
+      <%= t("product.category.#{product.category}") %>
+    </li>
+    <li class='price'>
+      <%= number_to_currency product.price %>
+    </li>
+  </ul>
+</div>

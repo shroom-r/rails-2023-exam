@@ -1,0 +1,42 @@
+<%= form_with(model: product) do |form| %>
+  <% if product.errors.any? %>
+    <div style="color: red">
+      <p>
+        <strong>
+          <%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:
+        </strong>
+      </p>
+
+      <ul>
+        <% product.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :price %>
+    <%= form.number_field :price, step: 0.01 %>
+  </p>
+
+  <p>
+    <%= form.label :discounted %>
+    <%= form.check_box :discounted %>
+    <mark style='display: block'>
+      Dynamically applies a 20% discount to the price. 💥
+    </mark>
+  </p>
+
+  <p>
+    <%= form.label :category %>
+    <%= form.select :category, Product.categories.keys.map { |cat| [t("product.category.#{cat}"), cat] } %>
+  </p>
+
+  <%= form.submit %>
+<% end %>

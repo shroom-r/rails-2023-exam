@@ -1,0 +1,12 @@
+<div id="products">
+  <% @products.each do |product| %>
+    <article>
+      <%= render product %>
+    </article>
+  <% end %>
+
+  <p style="text-align: center" class='counter'>
+    <%= t('.products_counter', count: @products.count) %>
+  </p>
+</div>
+

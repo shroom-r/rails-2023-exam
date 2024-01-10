@@ -1,0 +1,108 @@
+product_1:
+  title: Sparkling New Year's Champagne
+  description: A luxurious bottle of sparkling champagne, perfect for toasting to the new year.
+  price: 68.56
+  discounted: true
+  category: beverage
+  archived_at: null
+  created_at: <%= Time.current %>
+  updated_at: <%= Time.current %>
+product_2:
+  title: Gourmet Chocolate Truffles
+  description: Decadent chocolate truffles, ideal for New Year's Eve celebrations.
+  price: 17.16
+  discounted: true
+  category: food
+  archived_at: null
+  created_at: <%= Time.current %>
+  updated_at: <%= Time.current %>
+product_3:
+  title: Festive Party Poppers
+  description: Colorful party poppers to add excitement to your New Year's festivities.
+  price: 20.94
+  discounted: false
+  category: toys
+  archived_at: null
+  created_at: <%= Time.current %>
+  updated_at: <%= Time.current %>
+product_4:
+  title: New Year's Countdown Clock
+  description: A decorative countdown clock to mark the final moments of the year.
+  price: 32.99
+  discounted: false
+  category: toys
+  archived_at: null
+  created_at: <%= Time.current %>
+  updated_at: <%= Time.current %>
+product_5:
+  title: Holiday Fruitcake
+  description: A classic holiday fruitcake, rich with flavors and New Year cheer.
+  price: 68.1
+  discounted: true
+  category: food
+  archived_at: null
+  created_at: <%= Time.current %>
+  updated_at: <%= Time.current %>
+product_6:
+  title: Sparkling Apple Cider
+  description: Non-alcoholic sparkling cider, a family-friendly beverage for all to enjoy.
+  price: 66.66
+  discounted: true
+  category: beverage
+  archived_at: null
+  created_at: <%= Time.current %>
+  updated_at: <%= Time.current %>
+product_7:
+  title: Glittering New Year's Banner
+  description: A shimmering banner to decorate your space for New Year's Eve.
+  price: 19.66
+  discounted: false
+  category: toys
+  archived_at: null
+  created_at: <%= Time.current %>
+  updated_at: <%= Time.current %>
+product_8:
+  title: Midnight Fireworks Kit
+  description: A safe and fun fireworks kit to light up the New Year's sky.
+  price: 93.46
+  discounted: false
+  category: toys
+  archived_at: null
+  created_at: <%= Time.current %>
+  updated_at: <%= Time.current %>
+product_9:
+  title: Gourmet Cheese Platter
+  description: An exquisite selection of cheeses, perfect for a New Year's Eve gathering.
+  price: 16.36
+  discounted: false
+  category: food
+  archived_at: null
+  created_at: <%= Time.current %>
+  updated_at: <%= Time.current %>
+product_10:
+  title: New Year's Eve Party Hats
+  description: Festive hats to bring fun and joy to your New Year's celebration.
+  price: 54.29
+  discounted: true
+  category: toys
+  archived_at: null
+  created_at: <%= Time.current %>
+  updated_at: <%= Time.current %>
+product_11:
+  title: Vintage Wine Collection
+  description: A curated collection of vintage wines, archived from our exclusive New Year's selection.
+  price: 73.55
+  discounted: false
+  category: beverage
+  archived_at: null
+  created_at: <%= Time.current %>
+  updated_at: <%= Time.current %>
+product_archived:
+  title: Gourmet Snack Basket
+  description: A luxurious basket of gourmet snacks, previously featured in our New Year's collection.
+  price: 40.38
+  discounted: false
+  category: food
+  archived_at: <%= Time.current %>
+  created_at: <%= Time.current %>
+  updated_at: <%= Time.current %>
