@@ -11,5 +11,7 @@
 </nav>
 
 <br/>
+<% if !@product.archived? %>
 <%= button_to "Archive", [:archive, @product] %>
+<% end %>
 <%= button_to "Destroy", @product, method: :delete %>

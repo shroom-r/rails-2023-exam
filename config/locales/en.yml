@@ -35,7 +35,9 @@ en:
       toys: Toys 🧸
   products:
     index:
-      products_counter: "%{count} products"
+      products_counter:
+        one: "1 product"
+        other: "%{count} products"
   number:
     currency:
       format:

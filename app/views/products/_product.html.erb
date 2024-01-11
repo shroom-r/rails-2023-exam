@@ -10,7 +10,11 @@
       <%= t("product.category.#{product.category}") %>
     </li>
     <li class='price'>
-      <%= number_to_currency product.price %>
+      <% if product.discounted %>
+        <mark><%= number_to_currency product.price %> 💥</mark>
+      <% else %>
+        <%= number_to_currency product.price %>
+      <% end %>
     </li>
   </ul>
 </div>
