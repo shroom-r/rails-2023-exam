@@ -1,7 +1,7 @@
 require "test_helper"
 
 class ProductTest < ActiveSupport::TestCase
- test "validate title is unique" do #OK
+ test "validate title is unique" do
     existing_title = products(:product_1).title
     product = Product.new(title: existing_title)
 
@@ -9,7 +9,7 @@ class ProductTest < ActiveSupport::TestCase
     assert_includes product.errors[:title], 'has already been taken'
   end
 
-  test "active scope only return non-archived products" do #ok
+  test "active scope only return non-archived products" do
     Product.find_each(&:archive!)
     assert_equal 0, Product.active.count
 
@@ -18,7 +18,7 @@ class ProductTest < ActiveSupport::TestCase
   end
 
   # https://ruby-doc.org/3.2.2/Float.html#method-i-round
-  test "discount price by 20% (round to 2 decimals)" do #ok
+  test "discount price by 20% (round to 2 decimals)" do
     product = Product.new(price: 100)
     assert_equal 80.00, product.discounted_price
 

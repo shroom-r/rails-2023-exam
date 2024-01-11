@@ -5,7 +5,7 @@ class ProductsTest < ApplicationSystemTestCase
     all('.product .title').map(&:text)
   end
 
-  test "list only non-archived products in index and archived ones separately" do #TODO
+  test "list only non-archived products in index and archived ones separately" do
     archived_title = products(:product_archived).title
 
     visit products_path # /products
@@ -15,7 +15,7 @@ class ProductsTest < ApplicationSystemTestCase
     assert_equal [archived_title], products_title
   end
 
-  test "list only discounted products" do #TODO
+  test "list only discounted products" do
     visit discounted_products_path
 
     assert_equal "/discounts", current_path
@@ -24,7 +24,7 @@ class ProductsTest < ApplicationSystemTestCase
     assert_equal discounted_titles.sort, products_title.sort
   end
 
-  test "update product description (text area)" do #OK
+  test "update product description (text area)" do
     product = products(:product_1)
     new_description = "It's the best product!"
 
@@ -44,7 +44,7 @@ class ProductsTest < ApplicationSystemTestCase
     find('li.price').native.inner_html.strip
   end
 
-  test "highlight discounted price wiht mark tag and append 💥 after the price" do #TODO
+  test "highlight discounted price wiht mark tag and append 💥 after the price" do
     product = products(:product_3)
 
     visit product_url(product)
@@ -55,7 +55,7 @@ class ProductsTest < ApplicationSystemTestCase
     assert_match %r{\A<mark>CHF \d+.\d+ 💥</mark>\z}, price_html
   end
 
-  test "hide archive button when product is archived" do #ok
+  test "hide archive button when product is archived" do
     product = products(:product_1)
 
     visit product_url(product)
@@ -74,7 +74,7 @@ class ProductsTest < ApplicationSystemTestCase
     find('#products .counter').text
   end
 
-  test "show the numbers of products at the bottom of the index page" do #ok
+  test "show the numbers of products at the bottom of the index page" do
     visit products_by_category_path('beverage')
     assert_equal "3 products", products_counter
 
